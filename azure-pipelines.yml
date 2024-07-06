@@ -5,8 +5,6 @@ trigger:
 
 pool:
   vmImage: ubuntu-latest
-
-appendCommitMessageToRunName:
 stages:
 - stage: terraformValidate
   displayName: terraformValidate
