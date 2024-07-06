@@ -11,10 +11,14 @@ stages:
   jobs: 
   - job: terraformValidateJob
     steps:
+    # - task: PublishPipelineArtifact@1
+    #   inputs:
+    #     targetPath: '$(System.DefaultWorkingDirectory)/azure-aks-kubernetes-masterclass/26-my-practice /Terraform'
+    #     artifact: 'terraform-manifest'
+    #     publishLocation: 'pipeline'
     - task: PublishPipelineArtifact@1
       inputs:
-        targetPath: '$(System.DefaultWorkingDirectory)/azure-aks-kubernetes-masterclass/26-my-practice /Terraform'
+        targetPath: '$(System.DefaultWorkingDirectory)/26-my-practice /Terraform'
         artifact: 'terraform-manifest'
         publishLocation: 'pipeline'
-      
 
