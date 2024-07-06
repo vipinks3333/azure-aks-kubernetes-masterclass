@@ -13,7 +13,7 @@ stages:
     steps:
     - task: PublishPipelineArtifact@1
       inputs:
-        targetPath: '$(System.DefaultWorkingDirectory)/26-my-practice /Terraform/'
+        targetPath: '$(System.DefaultWorkingDirectory)/azure-aks-kubernetes-masterclass/26-my-practice /Terraform'
         artifact: 'terraform-manifest'
         publishLocation: 'pipeline'
       
