@@ -1,0 +1,22 @@
+
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+appendCommitMessageToRunName:
+stages:
+- stage: terraformValidate
+  displayName: terraformValidate
+  jobs: 
+  - job: terraformValidateJob
+    steps:
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(System.DefaultWorkingDirectory)/26-my-practice /Terraform/'
+        artifact: 'terraform-manifest'
+        publishLocation: 'pipeline'
+      
+
